@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Link, Routes } from "react-router-dom";
+
+// routing
+import Router1 from "./page/Router1";
+import Router2 from "./page/Router2";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+      <div>        
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          <Link to="/r1">Router1</Link>
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          깃허브 테스트!!!!
-        </a>
-      </header>
+        <p>
+          <Link to="/r2">Router2</Link>
+        </p>
+      </div>
+      <div>
+        <Routes>
+          <Route path="/r1" element={<Router1 />} />
+          <Route path="/r2" element={<Router2 />} />
+        </Routes>
+      </div>
     </div>
   );
 }
