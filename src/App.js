@@ -7,7 +7,8 @@ import Router2 from "./page/Router2";
 function App() {
   return (
     <div className="App">
-      <div>        
+      <div>
+        <p>자동 배포 테스트</p>        
         <p>
           <Link to="/r1">Router1</Link>
         </p>
