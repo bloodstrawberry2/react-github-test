@@ -34,3 +34,12 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           branch: gh-pages 
           folder: build
+
+      - name: Sleep for 5 minutes
+        run: sleep 300
+          
+      - name: Test for public JavaScript library vulnerabilities
+        if: success() # npm run deploy 성공 후 실행
+        uses: lirantal/is-website-vulnerable@main
+        with:
+          scan-url: "https://bloodstrawberry2.github.io/react-github-test/"
