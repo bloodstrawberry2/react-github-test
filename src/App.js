@@ -8,9 +8,8 @@ function App() {
   return (
     <div className="App">
       <div>
-        <p>자동 배포 테스트</p>    
-        <p>취약점 점검</p>    
-            
+        <p>자동 배포 테스트</p>  
+        <p>취약점 점검!!</p>      
         <p>
           <Link to="/r1">Router1</Link>
         </p>
